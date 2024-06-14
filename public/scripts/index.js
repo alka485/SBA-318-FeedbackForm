@@ -36,3 +36,19 @@ const createCard = (tip) => {
 
     tipContainer.append(cardEl);
 }
+
+//Get a list of existing tip from the server
+
+const getTips = () => {
+    fetch('/api/tips', {
+        method : 'GET',
+        headers : {
+            'Content-Type' : 'application/json',
+        },
+    })
+    .then((res) => res.json())
+    .then((data) => data)
+    .catch((error) => {
+        console.error('Error', error);
+    })
+}
