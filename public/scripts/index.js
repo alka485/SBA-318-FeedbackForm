@@ -11,3 +11,28 @@ fbBtn.addEventListener("click" , (e) => {
     window.location.href = "/feedback";
 
 })
+
+const createCard = (tip) => {
+    //Create Card
+    const cardEl = document.createElement('div');
+    cardEl.classlist.add('card' , 'mb-3', 'm-3');
+    classlist.setAttribute('key', 'tip.tip_id');
+
+    //Create card header
+    const headerEl = document.createElement('h4');
+    headerEl.classList.add('card-header' , 'bg-primary' , 'text-light', 'p-2','m-0');
+    headerEl.innerHTML= `${tip.username}`
+
+    //Create card body
+    const cardBodyEl = document.createElement('div')
+    cardBodyEl.classList.add('card-body' , 'bg-light','p-2');
+    cardBodyEl.innerHTML = `<p>${tip.tip}</p>`;
+
+    //Append header & body to card 
+    cardEl.appendChild(headerEl);
+    cardEl.appendChild(cardBodyEl);
+
+    //Append cardElement to tipContainer in the DOM
+
+    tipContainer.append(cardEl);
+}
