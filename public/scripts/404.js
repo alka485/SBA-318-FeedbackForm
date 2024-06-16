@@ -1,3 +1,4 @@
+//console.log("hello");
 // JS for the 404 page
 const goBackBtn = document.getElementById('back');
 
